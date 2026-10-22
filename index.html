@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas de lo cotidiano</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="main.js"></script></head>
+<body>
+    <header>
+        <h1>Atlas de lo cotidiano</h1>
+        <p>Un archivo colectivo de momentos y lugares.</p>
+    </header>
+
+    <main>
+        <section class="captura">
+            <h2>Registrar un momento</h2>
+            <p class="instruccion">
+                Activa la cámara, escribe una frase y captura tu fotografía.
+            </p>
+
+            <video id="camara" autoplay playsinline></video>
+            <canvas id="lienzo" hidden></canvas>
+
+            <p id="estado" role="status">
+                Activa la cámara para comenzar.
+            </p>
+
+            <div class="acciones">
+                <button id="activar" type="button">Activar cámara</button>
+                <button id="capturar" type="button" disabled>
+                    Tomar fotografía
+                </button>
+            </div>
+
+            <p id="ubicacion">
+                La ubicación se solicitará al tomar la fotografía.
+            </p>
+
+            <label for="frase">Una frase para este lugar</label>
+            <textarea
+                id="frase"
+                placeholder="¿Qué te gustaría recordar de este momento?"
+                maxlength="200"
+                rows="3"
+            ></textarea>
+
+            <p class="contador">
+                <span id="caracteres">0</span>/200 caracteres
+            </p>
+        </section>
+
+        <section class="archivo">
+            <h2>Archivo de momentos</h2>
+
+            <div id="galeria" class="galeria">
+                <p id="vacio">
+                    Todavía no hay fotografías. ¡Registra la primera!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Atlas de lo cotidiano · Archivo fotográfico en proceso</p>
+    </footer>
+</body>
+</html>
